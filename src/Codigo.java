@@ -32,21 +32,24 @@ public class Codigo {
     }
 //=====================================================================================================================
     public void contaDiminui(){
-        System.out.println("\n\t≠≠≠ Este Menu Esta em Construção! ≠≠≠");
-        /*
+
         System.out.println("\n\t≥≥ Subtrair ≤≤");
         System.out.print("\nQuantas Contas Quer Subtrair: ");
         qntddContas = entrada.nextInt();
         System.out.println("\n");
 
-        for (int i = 1; i <= qntddContas; i++){
+        System.out.print("Digite o 1º Numero: ");
+        result = entrada.nextInt();
+
+        for (int i = 2; i <= qntddContas; i++){
             System.out.print("Digite o " + i + "º Numero: ");
-            menos -= entrada.nextInt();
+            menos = entrada.nextInt();
+
+            result = result - menos;
         }
-        result = menos;
+
         System.out.println("\nResultado: " + result);
-        menos = 0;
-        */
+
     }
 //=====================================================================================================================
     public void contaDivide(){
