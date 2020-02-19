@@ -5,11 +5,12 @@ public class Codigo {
     Scanner entrada = new Scanner(System.in);
 
     private int qntddContas;
-    private int soma = 0;
-    private int menos = 0;
-    private int divide = 0;
-    private int vezes = 0;
+    private int soma;
+    private int menos;
     private int result;
+    private double numA;
+    private double numB;
+    private double resultado;
 
 //=====================================================================================================================
     public Codigo(){
@@ -26,6 +27,7 @@ public class Codigo {
             System.out.print("Digite o " + i + "º Numero: ");
             soma += entrada.nextInt();
         }
+
         result = soma;
         System.out.println("\nResultado: " + result);
         soma = 0;
@@ -54,57 +56,32 @@ public class Codigo {
 //=====================================================================================================================
     public void contaDivide(){
         System.out.println("\n\t≥≥ Dividir ≤≤");
-        System.out.print("\nDigite o 1º Numero: ");
-        int divideA = entrada.nextInt();
-        System.out.print("Digite o 2º Numero: ");
-        int divideB = entrada.nextInt();
+        do{
+            System.out.print("\nDigite o 1º Numero: ");
+            numA = entrada.nextDouble();
+            System.out.print("Digite o 2º Numero: ");
+            numB = entrada.nextDouble();
 
-        if (divideA < divideB){
-            System.out.println("\n\tO Primeiro Numero Deve ser Maior Que o Segundo!");
-        }
-        else {
-            result = divideA / divideB;
-            System.out.println("\nResultado: " + result);
-        }
+            if (numA < numB){
+                System.out.println("\n\tO Primeiro Numero Deve ser Maior Que o Segundo!");
+            }
+            else {
+                resultado = numA / numB;
+                System.out.println("\nResultado: " + resultado);
+            }
 
-        /*
-        System.out.print("\nQuantas Contas Quer Dividir: ");
-        qntddContas = entrada.nextInt();
-        System.out.println("\n");
-
-        for (int i = 1; i <= qntddContas; i++){
-            System.out.print("Digite o " + i + "º Numero: ");
-            divide /= entrada.nextInt();
-        }
-        result = divide;
-        System.out.println("\nResultado: " + result);
-        divide = 0;
-         */
+        }while (numA < numB);
     }
 //=====================================================================================================================
     public void contaMultiplica(){
         System.out.println("\n\t≥≥ Multiplicar ≤≤");
         System.out.print("\nDigite o 1º Numero: ");
-        int multiA = entrada.nextInt();
+        numA = entrada.nextInt();
         System.out.print("Digite o 2º Numero: ");
-        int multiB = entrada.nextInt();
+        numB = entrada.nextInt();
 
-        result = multiA * multiB;
-        System.out.println("\nResultado: " + result);
-
-        /*
-        System.out.print("\nQuantas Contas Quer Mulriplicar: ");
-        qntddContas = entrada.nextInt();
-        System.out.println("\n");
-
-        for (int i = 1; i <= qntddContas; i++){
-            System.out.print("Digite o " + i + "º Numero: ");
-            vezes *= entrada.nextInt();
-        }
-        result = vezes;
-        System.out.println("\nResultado: " + result);
-        vezes = 0;
-         */
+        resultado = numA * numB;
+        System.out.println("\nResultado: " + resultado);
     }
 //=====================================================================================================================
 }
